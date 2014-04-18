@@ -1,31 +1,13 @@
-var fs = require('fs');
+var path = require('path'),
+    Quadrant = require('./lib/Quadrant.js');
 
-var numBytes = 2,
-    matrixSize = 1201;
+var quadrant = new Quadrant(path.join(__dirname, '/files/N47W123.hgt'));
 
-function getOffset(lat, long) {
-    var rows = Math.floor( Math.abs(lat % 1) * matrixSize ),
-        columns = Math.floor( Math.abs(long % 1) * matrixSize );
+quadrant.read(47.606209, -122.332070, function(err, height) {
+    console.log(err);
+    console.log(height);
+});
 
-    return (rows * matrixSize + columns) * numBytes;
-}
-
-function readHgt(lat, long, callback) {
-    var offset = getOffset(lat, long),
-        buffer = new Buffer(numBytes);
-
-    fs.open('./files/N47W123.hgt', 'r', function(err, fd) {
-
-        fs.fstat(fd, function(err, stats) {
-            console.log('stats', stats);
-            console.log('offset', offset);
-        });
-
-        fs.read(fd, buffer, 0, numBytes, offset, function(err, bytesRead, buffer) {
-            console.log(buffer[0] + ',' + buffer[1], buffer[0] * 256 + buffer[1]);
-            callback && callback(err, buffer[0] * 256 + buffer[1]);
-        });
-    });
-}
-
-readHgt(47.606209, -122.332070);
+quadrant.load(function(err, matrix) {
+    console.log(arguments);
+});
