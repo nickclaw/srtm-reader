@@ -1,0 +1,17 @@
+{
+  "name": "UWCenterStack-Location",
+  "version": "0.0.0",
+  "description": "Read SRTM .hgt data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickclaw/UWCenterStack-Location"
+  },
+  "bugs": {
+    "url": "https://github.com/nickclaw/UWCenterStack-Location/issues"
+  },
+  "homepage": "https://github.com/nickclaw/UWCenterStack-Location"
+}
