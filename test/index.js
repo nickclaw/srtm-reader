@@ -1,7 +1,7 @@
 var path = require('path'),
-    Quadrant = require('../lib/Quadrant.js');
+    loc = require('../index.js');
 
-var quadrant = new Quadrant(path.join(__dirname, './N47W123.hgt'));
+var quadrant = new loc.Quadrant(path.join(__dirname, './N47W123.hgt'));
 
 quadrant.read(47.234, -122.2340, function(err, height) {
     console.log(err);
@@ -11,3 +11,15 @@ quadrant.read(47.234, -122.2340, function(err, height) {
 quadrant.load(function(err, matrix) {
     console.log(arguments);
 });
+
+var a = new loc.GraduatedArray(),
+    b = new loc.GraduatedArray(),
+    c = new loc.GraduatedMatrix();
+
+a.push(0); a.push(1);
+b.push(0); b.push(1);
+c.push(a); c.push(b);
+
+console.log(c);
+
+console.log(c.get(1,.5));
