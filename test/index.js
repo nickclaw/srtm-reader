@@ -9,7 +9,8 @@ quadrant.read(47.234, -122.2340, function(err, height) {
 });
 
 quadrant.load(function(err, matrix) {
-    console.log(arguments);
+    console.log(matrix.length);
+    console.log(matrix[matrix.length - 1].length)
 });
 
 var a = new loc.GraduatedArray(),
@@ -23,3 +24,12 @@ c.push(a); c.push(b);
 console.log(c);
 
 console.log(c.get(1,.5));
+
+
+
+
+console.log(quadrant);
+
+quadrant.each(function(lat, long, el) {
+    console.log(lat, long, el);
+});
