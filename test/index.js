@@ -25,11 +25,8 @@ console.log(c);
 
 console.log(c.get(1,.5));
 
-
-
-
 console.log(quadrant);
 
-quadrant.each(function(lat, long, el) {
+quadrant.each(function(err, lat, long, el) {
     console.log(lat, long, el);
 });
