@@ -1,7 +1,9 @@
 var path = require('path'),
     loc = require('../index.js');
 
-var quadrant = new loc.Quadrant(path.join(__dirname, './N47W123.hgt'));
+var quadrant = new loc.Quadrant({
+    filename: path.join(__dirname, './N47W123.hgt')
+});
 
 quadrant.read(47.234, -122.2340, function(err, height) {
     console.log(err);
