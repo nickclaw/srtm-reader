@@ -1,5 +1,4 @@
-UWCenterStack-Elevation
+srtm-reader
 =======================
 
-This node module uses data supplied by the Shuttle Radar Topography
-Mission to calculate elevation at any latitude and longitude.
+Read elevation data from the NASA Shuttle Radar Topography Mission.

@@ -1,7 +1,33 @@
 {
-  "name": "UWCenterStack-Location",
+  "name": "srtm-reader",
   "version": "0.0.0",
   "description": "Read SRTM .hgt data.",
+  "author": {
+    "name": "Nicholas Clawson",
+    "email": "nickclaw@gmail.com",
+    "url": "nickclaw.com"
+  },
+  "keywords": [
+      "NASA",
+      "SRTM",
+      "elevation",
+      "data",
+      "parse",
+      "read",
+      "hgt",
+      ".hgt",
+      "shuttle",
+      "radar",
+      "topology",
+      "mission",
+      "latitude",
+      "longitude",
+      "lat",
+      "long",
+      "altitude",
+      "sea",
+      "level"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "node test/index.js"
