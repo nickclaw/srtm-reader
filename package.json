@@ -34,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nickclaw/UWCenterStack-Location"
+    "url": "https://github.com/nickclaw/srtm-reader"
   },
   "bugs": {
-    "url": "https://github.com/nickclaw/UWCenterStack-Location/issues"
+    "url": "https://github.com/nickclaw/srtm-reader"
   },
-  "homepage": "https://github.com/nickclaw/UWCenterStack-Location"
+  "homepage": "https://github.com/nickclaw/srtm-reader"
 }
