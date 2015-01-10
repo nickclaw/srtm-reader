@@ -10,6 +10,10 @@ quadrant.read(47.234, -122.2340, function(err, height) {
     console.log(height);
 });
 
+console.log('A 3" SRTM file has file size ' + quadrant._fileSize());
+console.log('A point near the upper left corner (47.9999, -122.9999) is in the first cell at the beginning of the file, offset ' + quadrant._getOffset(47.9999, -122.9999));
+console.log('A point near the lower right corner (47.0001, -122.0001) is in the last cell at the last two bytes of the file, offset ' + quadrant._getOffset(47.0001, -122.0001));
+
 quadrant.load(function(err, matrix) {
     console.log(matrix.length);
     console.log(matrix[matrix.length - 1].length)
